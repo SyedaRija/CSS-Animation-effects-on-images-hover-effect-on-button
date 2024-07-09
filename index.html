@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div >
+    <nav class="navbar">
+      <div class="logo">
+        ORG Health & Beauty
+      </div>
+      <ul class="nav-item">
+        <li>Home</li>
+        <li >About</li>
+        <li >Services</li>
+        <li >Contact us</li>
+      </ul>
+    </nav>
+  </div>
+    <main class="container" >
+      <div class="left">
+        <h1 >
+          Organic Product
+        </h1>
+        <p >
+          Organic products offer numerous benefits, promoting overall health and
+          sustainability. Free from synthetic pesticides and fertilizers, they
+          reduce exposure to harmful chemicals. Organic farming practices
+          enhance soil fertility, protect biodiversity, and contribute to a
+          healthier environment, fostering long-term well-being for both
+          consumers and the planet.
+        </p>
+        <div >
+          <button class="btn"> Skincare</button>
+        </div>
+      </div>
+      <div class="right">
+        <img width="400"
+          src="https://images.unsplash.com/photo-1599847987657-881f11b92a75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2tpbmNhcmV8ZW58MHx8MHx8fDA%3D"
+          alt=""/>
+      </div>
+    </main>
+
+
+    <script>
+      const button = document.querySelector(".btn");
+
+      button.addEventListener("click", e => {
+        e.preventDefault();
+        button.classList.add("animate")
+
+
+        setTimeout(() => {
+          button.classList.remove("animate")
+        }, 600);
+      })
+    </script>
+
+  </body>
+</html>
+
+</body>
+</html>

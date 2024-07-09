@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(39 0 111);
+    color: white;
+    padding: 18px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.logo:hover {
+    cursor: pointer;
+    color: rgb(211, 240, 21);
+}
+
+.nav-item {
+    display: flex;
+    font-size: 22px;
+}
+
+.nav-item li {
+    list-style: none;
+    padding: 0 12px;
+}
+
+.nav-item li:hover {
+    cursor: pointer;
+    color: rgb(211, 240, 21);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.left {
+    width: 500px;
+    margin: 85px 50px;
+}
+
+.left h1 {}
+
+.btn {
+    position: relative;
+    padding: 10px 22px;
+    background: rgb(39 0 111);
+    border-radius: 6px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    font-weight: 400;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.btn:active {
+    transform: scale(0.96);
+}
+
+.btn::before,
+.btn::after {
+    position: absolute;
+    content: "";
+    width: 150%;
+    left: 50%;
+    height: 100%;
+    transform: translateX(-50%);
+    z-index: -1000;
+    background-repeat: no-repeat;
+
+
+}
+
+.btn.animate::before {
+    top: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 20%, #7d2ae8 20%, transparent 30%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+        10% 10%, 18% 18%;
+    animation: topBubbles ease-in-out 0.9s forwards;
+}
+
+@keyframes topBubbles {
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 50%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+.btn.animate::after {
+    bottom: -70%;
+    background-image: radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, transparent 10%, #7d2ae8 15%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%),
+        radial-gradient(circle, #7d2ae8 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+    animation: bottomBubbles ease-in-out 0.6s forwards;
+}
+
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+            70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+            105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+            110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
