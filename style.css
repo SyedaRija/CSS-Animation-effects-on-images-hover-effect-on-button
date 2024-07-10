@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+    /* overflow-x: hidden; */
 }
 
 .navbar {
@@ -24,7 +25,9 @@
 
 .logo:hover {
     cursor: pointer;
-    color: rgb(211, 240, 21);
+    color: aliceblue;
+    font-size: 25px;
+    font-weight: 700;
 }
 
 .nav-item {
@@ -39,7 +42,10 @@
 
 .nav-item li:hover {
     cursor: pointer;
-    color: rgb(211, 240, 21);
+    color: aliceblue;
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: underline;
 }
 
 .container {
@@ -54,20 +60,42 @@
     margin: 85px 50px;
 }
 
-.left h1 {}
+.left h1 {
+    font-size: 39px;
+    padding: 10px;
+    text-align: center
+}
+.left p{
+    font-size: 20px;
+    color: #6a6363;
+    text-align: center;
+}
 
 .btn {
     position: relative;
-    padding: 10px 22px;
     background: rgb(39 0 111);
-    border-radius: 6px;
     color: #fff;
-    font-size: 18px;
+    border-radius: 6px;
     border: none;
+    font-size: 18px;
     font-weight: 400;
-    cursor: pointer;
+    padding: 10px 22px;
+    margin: 40px 167px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(49, 1, 136);
+    box-shadow: 1px 3px 3px 0 #9a899a;
+
+}
+.right img{
+    margin: 20px 0;
+    border-radius: 6px;
+}
+.right img:hover{
+    box-shadow: 2px 3px 10px 0px gray
 }
 
 .btn:active {
@@ -143,5 +171,54 @@
         background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
             110% 10%;
         background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+section{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* section:nth-child(1){
+    color: #fff;
+}
+section:nth-child(2){
+    color: #fff;
+} */
+
+section .container{
+    margin: 100px;
+}
+section h2{
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+section .cards{
+ display: flex;
+}
+section .cards .text-card{
+    background: #2e195a;
+    margin: 20px;
+    padding: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+
+@media (max-width:900px) {
+    section .cards{
+        flex-direction: column;
     }
 }

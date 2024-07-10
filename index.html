@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navbar -->
   <div >
     <nav class="navbar">
       <div class="logo">
@@ -20,12 +21,13 @@
       </ul>
     </nav>
   </div>
-    <main class="container" >
+  <!--  -->
+  <div class="container show-animate">
       <div class="left">
-        <h1 >
+        <h1 class="">
           Organic Product
         </h1>
-        <p >
+        <p class="">
           Organic products offer numerous benefits, promoting overall health and
           sustainability. Free from synthetic pesticides and fertilizers, they
           reduce exposure to harmful chemicals. Organic farming practices
@@ -33,7 +35,7 @@
           healthier environment, fostering long-term well-being for both
           consumers and the planet.
         </p>
-        <div >
+        <div class="">
           <button class="btn"> Skincare</button>
         </div>
       </div>
@@ -42,22 +44,28 @@
           src="https://images.unsplash.com/photo-1599847987657-881f11b92a75?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8c2tpbmNhcmV8ZW58MHx8MHx8fDA%3D"
           alt=""/>
       </div>
-    </main>
+      </div>
+    <!--  -->
+    <section>
+      <div class="container reveal">
+          <div class="cards">
+              <div class="text-card">
+                  <h2>Beauty Products</h2>
+                  <img width="260" src="https://images.unsplash.com/photo-1643185450492-6ba77dea00f6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmVhdXR5fGVufDB8fDB8fHww" alt="">
+              </div>
+              <div class="text-card">
+                  <h2>Skincare</h2>
+                  <img width="250" src="https://images.unsplash.com/photo-1506003094589-53954a26283f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJlYXV0eXxlbnwwfHwwfHx8MA%3D%3D" alt="">
+              </div>
+              <div class="text-card">
+                  <h2>Body Care</h2>
+                  <img width="250" src="https://images.unsplash.com/photo-1603274737277-f43f54446c7b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmVhdXR5fGVufDB8fDB8fHww" alt="">
+              </div>
+          </div>
+      </div>
+  </section>
 
-
-    <script>
-      const button = document.querySelector(".btn");
-
-      button.addEventListener("click", e => {
-        e.preventDefault();
-        button.classList.add("animate")
-
-
-        setTimeout(() => {
-          button.classList.remove("animate")
-        }, 600);
-      })
-    </script>
+    <script src="script.js"></script>
 
   </body>
 </html>
